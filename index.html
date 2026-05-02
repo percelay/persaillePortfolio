@@ -45,39 +45,142 @@
           </p>
         </div>
 
-        <div class="hero__canvas">
-          <div class="hero__mast">
-            <p class="hero__kicker">PERSAILLE / NEW YORK</p>
-            <h1 class="hero__wordmark">PERSAILLE</h1>
-            <div class="hero__copy">
-              <p class="hero__line">Websites. Design. Marketing. Product engineering.</p>
+        <div class="stage">
+          <div class="stage__grid">
+
+            <!-- Persaille brand box -->
+            <div class="cell cell--brand">
+              <p class="eyebrow"><span class="dot"></span>PERSAILLE</p>
+              <span class="brand-mark-l" aria-hidden="true">
+                <svg viewBox="0 0 36 36" width="100%" height="100%" preserveAspectRatio="xMinYMin meet">
+                  <rect x="0.5" y="0.5" width="35" height="35" fill="none" stroke="currentColor" stroke-width="1"/>
+                  <line x1="0" y1="18" x2="36" y2="18" stroke="currentColor" stroke-width="1"/>
+                  <line x1="18" y1="0" x2="18" y2="36" stroke="currentColor" stroke-width="1"/>
+                </svg>
+              </span>
+              <p class="brand__meta">A TECH AGENCY <br/>FROM NEW YORK</p>
             </div>
+
+            <!-- About / instructions -->
+            <div class="cell cell--about">
+              <p class="eyebrow"><span class="dot"></span>ABOUT</p>
+              <p class="cell__copy">
+                Below you'll find a working résumé — each role expands into example sites, product demos, and case studies. Reach out anytime via the contact box.
+              </p>
+            </div>
+
+            <!-- Big focal heading -->
+            <div class="cell cell--focal">
+              <h1 class="focal">
+                Websites, design,<br/>marketing <em>and</em><br/>product engineering.
+              </h1>
+            </div>
+
+            <!-- Contact info -->
+            <div class="cell cell--contact">
+              <p class="eyebrow"><span class="dot"></span>CONTACT</p>
+              <ul class="contact__list">
+                <li>
+                  <span>Email</span>
+                  <a href="mailto:dale@persaille.com">dale@persaille.com</a>
+                </li>
+                <li>
+                  <span>Phone</span>
+                  <a href="tel:+12012137155">+1 (201) 213&#8209;7155</a>
+                </li>
+                <li>
+                  <span>Social</span>
+                  <a href="https://www.linkedin.com/in/dalepercelay" target="_blank" rel="noopener">LinkedIn ↗</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Status / index small label -->
+            <div class="cell cell--status">
+              <p class="eyebrow"><span class="dot dot--pulse"></span>AVAILABLE</p>
+              <p class="status__sub">Reply &lt; 24h</p>
+            </div>
+
+            <!-- Resume CTA -->
+            <a href="#resume" class="cell cell--resume">
+              <p class="eyebrow"><span class="dot"></span>02 / RESUME</p>
+              <h2 class="resume-cta">
+                <span class="resume-cta__word">Resume</span>
+                <span class="resume-cta__arrow" aria-hidden="true">→</span>
+              </h2>
+              <p class="cell__copy">Roles · Demos · Example sites</p>
+            </a>
+
+            <!-- Decorative rotating seal -->
+            <div class="cell cell--seal" aria-hidden="true">
+              <div class="seal">
+                <svg class="seal__ring" viewBox="0 0 200 200">
+                  <defs>
+                    <path id="seal-path" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0"/>
+                  </defs>
+                  <text>
+                    <textPath href="#seal-path" startOffset="0">PERSAILLE · TECH AGENCY · NEW YORK · EST. 2026 · </textPath>
+                  </text>
+                </svg>
+                <span class="seal__core">
+                  <svg viewBox="0 0 24 24" width="22" height="22">
+                    <rect x="0.5" y="0.5" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1"/>
+                    <line x1="0" y1="12" x2="24" y2="12" stroke="currentColor" stroke-width="1"/>
+                    <line x1="12" y1="0" x2="12" y2="24" stroke="currentColor" stroke-width="1"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+
           </div>
 
-          <div class="hero__map" aria-label="Contact information">
-            <span class="hero__axis hero__axis--x"></span>
-            <span class="hero__axis hero__axis--y"></span>
-            <a class="hero__node hero__node--email" href="mailto:dale@persaille.com">
-              <span>Email</span>
-              <strong>dale@persaille.com</strong>
-            </a>
-            <a class="hero__node hero__node--phone" href="tel:+12012137155">
-              <span>Phone</span>
-              <strong>+1 (201) 213-7155</strong>
-            </a>
-            <a class="hero__node hero__node--social" href="https://www.linkedin.com/in/dalepercelay" target="_blank" rel="noopener">
-              <span>Social</span>
-              <strong>LinkedIn</strong>
-            </a>
-            <a class="hero__node hero__node--resume" href="#resume">
-              <span>Resume</span>
-              <strong>View Resume</strong>
-            </a>
-            <div class="hero__node hero__node--location">
-              <span>Location</span>
-              <strong>New York</strong>
+          <!-- Black auto-scrolling vertical rail -->
+          <aside class="rail" aria-label="Services offered">
+            <div class="rail__track">
+              <span>Web Development</span>
+              <span class="rail__sep" aria-hidden="true">·</span>
+              <span>Product Engineering</span>
+              <span class="rail__sep" aria-hidden="true">·</span>
+              <span>AI Integration</span>
+              <span class="rail__sep" aria-hidden="true">·</span>
+              <span>Brand Design</span>
+              <span class="rail__sep" aria-hidden="true">·</span>
+              <span>Marketing Systems</span>
+              <span class="rail__sep" aria-hidden="true">·</span>
+              <span>Strategy Consulting</span>
+              <span class="rail__sep" aria-hidden="true">·</span>
+              <span>Cybersecurity</span>
+              <span class="rail__sep" aria-hidden="true">·</span>
+              <span>Data Engineering</span>
+              <span class="rail__sep" aria-hidden="true">·</span>
+              <span>Custom Software</span>
+              <span class="rail__sep" aria-hidden="true">·</span>
+              <span>Technical Demos</span>
+              <span class="rail__sep" aria-hidden="true">·</span>
+              <!-- duplicate set for seamless loop -->
+              <span aria-hidden="true">Web Development</span>
+              <span aria-hidden="true" class="rail__sep">·</span>
+              <span aria-hidden="true">Product Engineering</span>
+              <span aria-hidden="true" class="rail__sep">·</span>
+              <span aria-hidden="true">AI Integration</span>
+              <span aria-hidden="true" class="rail__sep">·</span>
+              <span aria-hidden="true">Brand Design</span>
+              <span aria-hidden="true" class="rail__sep">·</span>
+              <span aria-hidden="true">Marketing Systems</span>
+              <span aria-hidden="true" class="rail__sep">·</span>
+              <span aria-hidden="true">Strategy Consulting</span>
+              <span aria-hidden="true" class="rail__sep">·</span>
+              <span aria-hidden="true">Cybersecurity</span>
+              <span aria-hidden="true" class="rail__sep">·</span>
+              <span aria-hidden="true">Data Engineering</span>
+              <span aria-hidden="true" class="rail__sep">·</span>
+              <span aria-hidden="true">Custom Software</span>
+              <span aria-hidden="true" class="rail__sep">·</span>
+              <span aria-hidden="true">Technical Demos</span>
+              <span aria-hidden="true" class="rail__sep">·</span>
             </div>
-          </div>
+          </aside>
+
         </div>
 
       </div>
