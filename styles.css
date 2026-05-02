@@ -898,21 +898,7 @@ ol, ul { list-style: none; padding: 0; margin: 0; }
   line-height: 1;
   letter-spacing: 0.24em;
   text-align: right;
-  background: linear-gradient(
-    105deg,
-    var(--color-ink-black) 0%,
-    #6c6c6c 24%,
-    #d7d7d7 38%,
-    var(--color-ink-black) 52%,
-    #8d8d8d 72%,
-    var(--color-ink-black) 100%
-  );
-  background-size: 220% 100%;
-  background-position: 45% 50%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 0 18px rgba(41, 41, 41, 0.14);
+  color: var(--color-ink-black);
 }
 
 /* ─── WORKS ─────────────────────────────────────────────── */
