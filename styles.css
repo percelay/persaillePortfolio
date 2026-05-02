@@ -18,8 +18,8 @@
   --text-heading-lg: 32px;
 
   --gutter: clamp(20px, 4vw, 50px);
-  --rule:   1px solid var(--color-ink-black);
-  --rule-thin: 1px solid rgba(41, 41, 41, 0.35);
+  --rule:   2px solid var(--color-ink-black);
+  --rule-thin: 2px solid rgba(41, 41, 41, 0.35);
 
   --nav-h: 56px;
 }
@@ -86,8 +86,8 @@ ol, ul { list-style: none; padding: 0; margin: 0; }
   grid-row: 3 / 5;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: clamp(24px, 4vw, 54px);
+  justify-content: flex-start;
+  gap: clamp(28px, 4vw, 58px);
   padding: clamp(24px, 3vw, 44px);
 }
 
@@ -157,8 +157,13 @@ ol, ul { list-style: none; padding: 0; margin: 0; }
   fill: var(--color-canvas-white);
 }
 
-.mark-field {
-  padding: clamp(26px, 4vw, 52px);
+.top-left-art {
+  display: block;
+  position: absolute;
+  inset: clamp(20px, 3vw, 42px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .orbit-field {
@@ -176,31 +181,37 @@ ol, ul { list-style: none; padding: 0; margin: 0; }
   margin: 0;
 }
 
-.reviews-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 38px;
-  padding: 9px 16px;
-  border: var(--rule);
-  font-family: var(--font-s-condensed);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  transition: background 140ms ease, color 140ms ease;
+.review-quote {
+  width: min(62%, 260px);
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-nh);
+  text-align: right;
 }
 
-.reviews-link:hover,
-.reviews-link:focus-visible {
-  background: var(--color-ink-black);
-  color: var(--color-canvas-white);
+.review-quote blockquote {
+  margin: 0;
+  font-size: clamp(13px, 1.05vw, 16px);
+  font-weight: 300;
+  line-height: 1.32;
+  letter-spacing: -0.02em;
+}
+
+.review-quote figcaption {
+  margin-top: 10px;
+  font-family: var(--font-s-condensed);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  line-height: 1.25;
+  text-transform: uppercase;
+  opacity: 0.68;
 }
 
 .client-list {
   display: flex;
   flex-direction: column;
-  gap: clamp(14px, 2vw, 24px);
+  gap: clamp(12px, 1.3vw, 18px);
 }
 
 .client-list a {
@@ -208,7 +219,7 @@ ol, ul { list-style: none; padding: 0; margin: 0; }
   width: fit-content;
   max-width: 100%;
   font-family: var(--font-nh);
-  font-size: clamp(24px, 2.2vw, 38px);
+  font-size: clamp(22px, 1.9vw, 31px);
   font-weight: 200;
   line-height: 1;
   letter-spacing: -0.045em;
@@ -691,7 +702,7 @@ ol, ul { list-style: none; padding: 0; margin: 0; }
 
   .statement-frame h1 { font-size: clamp(28px, 4.6vw, 36px); }
 
-  .client-list a { font-size: clamp(22px, 3.2vw, 30px); }
+  .client-list a { font-size: clamp(20px, 2.8vw, 26px); }
 
   .rail {
     width: 44px;
@@ -766,8 +777,13 @@ ol, ul { list-style: none; padding: 0; margin: 0; }
     flex-direction: column;
   }
 
+  .review-quote {
+    width: 100%;
+    text-align: left;
+  }
+
   .client-list a {
-    font-size: clamp(24px, 8.2vw, 38px);
+    font-size: clamp(20px, 6vw, 25px);
   }
 
   .statement-frame--outer {
