@@ -38,95 +38,40 @@
     <section class="hero">
       <div class="hero__inner">
 
+        <div class="hero__mark">
+          <h1 class="hero__wordmark">PERSAILLE</h1>
+          <p class="hero__meta"><span>EST. 2026</span><span class="dot"></span><span>NEW YORK</span></p>
+        </div>
+
         <div class="hero__top">
           <div class="hero__text">
-            <p class="eyebrow"><span>EST. 2026</span><span class="dot"></span><span>NEW YORK</span></p>
-            <h1 class="hero__headline">precise<br/>software<br/>systems.</h1>
+            <p class="eyebrow">A / TECH AGENCY</p>
+            <h2 class="hero__headline">precise<br/>software systems.</h2>
             <p class="hero__sub">
               Persaille is an independent tech agency. We design, engineer, and ship.
             </p>
           </div>
 
           <aside class="hero__art" aria-hidden="true">
-            <div class="art__corners">
-              <span></span><span></span><span></span><span></span>
-            </div>
-            <p class="art__label art__label--tl">FIG. 01 · SCHEMATIC</p>
-            <p class="art__label art__label--tr">REV. 02</p>
-            <p class="art__label art__label--bl">P—01</p>
-            <p class="art__label art__label--br">SCALE 1:1</p>
-            <svg viewBox="0 0 240 240" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
-              <defs>
-                <pattern id="ticks-x" x="0" y="0" width="20" height="6" patternUnits="userSpaceOnUse">
-                  <line x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="0.5"/>
-                </pattern>
-                <pattern id="ticks-y" x="0" y="0" width="6" height="20" patternUnits="userSpaceOnUse">
-                  <line x1="0" y1="0" x2="6" y2="0" stroke="currentColor" stroke-width="0.5"/>
-                </pattern>
-                <pattern id="grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" stroke-width="0.25" opacity="0.35"/>
-                </pattern>
-              </defs>
-
-              <!-- background grid -->
-              <rect x="20" y="20" width="200" height="200" fill="url(#grid)"/>
-
-              <!-- frame + tick rails -->
-              <rect x="20" y="20" width="200" height="200" fill="none" stroke="currentColor" stroke-width="1"/>
-              <rect x="20" y="14" width="200" height="6" fill="url(#ticks-x)"/>
-              <rect x="20" y="220" width="200" height="6" fill="url(#ticks-x)"/>
-              <rect x="14" y="20" width="6" height="200" fill="url(#ticks-y)"/>
-              <rect x="220" y="20" width="6" height="200" fill="url(#ticks-y)"/>
-
-              <!-- crosshair / dashed reference -->
-              <line x1="20" y1="120" x2="220" y2="120" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 3"/>
-              <line x1="120" y1="20" x2="120" y2="220" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 3"/>
-
-              <!-- diagonals -->
-              <line x1="20" y1="20" x2="220" y2="220" stroke="currentColor" stroke-width="0.4" stroke-dasharray="1 4" opacity="0.6"/>
-              <line x1="220" y1="20" x2="20" y2="220" stroke="currentColor" stroke-width="0.4" stroke-dasharray="1 4" opacity="0.6"/>
-
-              <!-- concentric -->
-              <circle cx="120" cy="120" r="92" fill="none" stroke="currentColor" stroke-width="0.6"/>
-              <circle cx="120" cy="120" r="72" fill="none" stroke="currentColor" stroke-width="0.6"/>
-              <circle cx="120" cy="120" r="52" fill="none" stroke="currentColor" stroke-width="0.6"/>
-              <circle cx="120" cy="120" r="32" fill="none" stroke="currentColor" stroke-width="0.6"/>
-              <circle cx="120" cy="120" r="14" fill="none" stroke="currentColor" stroke-width="0.6"/>
-              <circle cx="120" cy="120" r="2"  fill="currentColor"/>
-
-              <!-- register marks -->
-              <g stroke="currentColor" stroke-width="0.6" fill="none">
-                <circle cx="40"  cy="40"  r="4"/><line x1="40"  y1="34" x2="40"  y2="46"/><line x1="34" y1="40"  x2="46" y2="40"/>
-                <circle cx="200" cy="40"  r="4"/><line x1="200" y1="34" x2="200" y2="46"/><line x1="194" y1="40" x2="206" y2="40"/>
-                <circle cx="40"  cy="200" r="4"/><line x1="40"  y1="194" x2="40" y2="206"/><line x1="34" y1="200" x2="46" y2="200"/>
-                <circle cx="200" cy="200" r="4"/><line x1="200" y1="194" x2="200" y2="206"/><line x1="194" y1="200" x2="206" y2="200"/>
-              </g>
-
-              <!-- traces -->
-              <path d="M 120 32 L 152 32 L 152 56 L 188 56" fill="none" stroke="currentColor" stroke-width="0.8"/>
-              <path d="M 120 208 L 88 208 L 88 184 L 52 184" fill="none" stroke="currentColor" stroke-width="0.8"/>
-              <path d="M 32 120 L 32 88 L 56 88 L 56 56" fill="none" stroke="currentColor" stroke-width="0.8"/>
-              <path d="M 208 120 L 208 152 L 184 152 L 184 188" fill="none" stroke="currentColor" stroke-width="0.8"/>
-
-              <!-- pads -->
-              <g fill="currentColor">
-                <circle cx="188" cy="56" r="2"/>
-                <circle cx="52" cy="184" r="2"/>
-                <circle cx="56" cy="56" r="2"/>
-                <circle cx="184" cy="188" r="2"/>
-              </g>
-
-              <!-- coords -->
-              <text x="20" y="11" font-family="'JetBrains Mono', monospace" font-size="6" fill="currentColor" letter-spacing="0.5">X 0.000</text>
-              <text x="186" y="11" font-family="'JetBrains Mono', monospace" font-size="6" fill="currentColor" letter-spacing="0.5">X 1.000</text>
-              <text x="2" y="120" font-family="'JetBrains Mono', monospace" font-size="6" fill="currentColor" letter-spacing="0.5" transform="rotate(-90 6 120)">Y 0.500</text>
-              <text x="125" y="118" font-family="'JetBrains Mono', monospace" font-size="5" fill="currentColor" letter-spacing="0.5">ORIGIN</text>
-              <text x="125" y="125" font-family="'JetBrains Mono', monospace" font-size="5" fill="currentColor" letter-spacing="0.5">0,0</text>
+            <svg viewBox="0 0 400 400" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+              <rect x="0.5" y="0.5" width="399" height="399" fill="none" stroke="currentColor" stroke-width="1"/>
+              <line x1="0" y1="100" x2="400" y2="100" stroke="currentColor" stroke-width="1"/>
+              <line x1="0" y1="200" x2="400" y2="200" stroke="currentColor" stroke-width="1"/>
+              <line x1="0" y1="300" x2="400" y2="300" stroke="currentColor" stroke-width="1"/>
+              <line x1="100" y1="0" x2="100" y2="400" stroke="currentColor" stroke-width="1"/>
+              <line x1="200" y1="0" x2="200" y2="400" stroke="currentColor" stroke-width="1"/>
+              <line x1="300" y1="0" x2="300" y2="400" stroke="currentColor" stroke-width="1"/>
+              <circle cx="200" cy="200" r="80" fill="none" stroke="currentColor" stroke-width="1"/>
+              <circle cx="200" cy="200" r="40" fill="none" stroke="currentColor" stroke-width="1"/>
+              <circle cx="200" cy="200" r="3" fill="currentColor"/>
+              <line x1="120" y1="200" x2="280" y2="200" stroke="currentColor" stroke-width="1" stroke-dasharray="2 4"/>
+              <line x1="200" y1="120" x2="200" y2="280" stroke="currentColor" stroke-width="1" stroke-dasharray="2 4"/>
+              <text x="12" y="20" font-family="'Roboto Condensed', Impact, sans-serif" font-size="10" letter-spacing="2" fill="currentColor">FIG. 01</text>
+              <text x="350" y="392" font-family="'Roboto Condensed', Impact, sans-serif" font-size="10" letter-spacing="2" fill="currentColor">P—01</text>
             </svg>
           </aside>
         </div>
 
-        <!-- A / B / C strip -->
         <div class="cells" role="list">
           <div class="cell" role="listitem">
             <div class="cell__head">
@@ -160,7 +105,6 @@
         <div>
           <p class="eyebrow">02 / RESUME</p>
           <h2 class="resume__title">Dale Percelay</h2>
-          <p class="resume__sub">Founder, Persaille. Engineer · Strategist · Product.</p>
         </div>
         <div class="resume__actions">
           <a class="btn" href="resume.pdf" target="_blank" rel="noopener">DOWNLOAD PDF ↓</a>
@@ -204,40 +148,40 @@
         </li>
 
         <li>
-          <a class="entry" href="#" data-entry="exclusive-pm">
+          <a class="entry" href="#" data-entry="exclusive">
             <span class="entry__no">03</span>
             <span class="entry__role">
-              <span class="entry__title">Product Manager</span>
+              <span class="entry__title">Data &amp; Product</span>
               <span class="entry__company">Exclusive Networks <span class="sep">·</span> Cybersecurity</span>
             </span>
             <span class="entry__loc hide-sm">New York, NY</span>
-            <span class="entry__period">Jan 2025 — Sep 2025</span>
+            <span class="entry__period">Apr 2024 — Sep 2025</span>
             <span class="entry__arrow" aria-hidden="true">→</span>
           </a>
         </li>
 
         <li>
-          <a class="entry" href="#" data-entry="exclusive-ds">
+          <a class="entry" href="#" data-entry="research">
             <span class="entry__no">04</span>
             <span class="entry__role">
-              <span class="entry__title">Data Scientist</span>
-              <span class="entry__company">Exclusive Networks <span class="sep">·</span> Cybersecurity</span>
+              <span class="entry__title">Research</span>
+              <span class="entry__company">Cal Poly <span class="sep">·</span> Statistics &amp; ML</span>
             </span>
-            <span class="entry__loc hide-sm">New York, NY</span>
-            <span class="entry__period">Apr 2024 — Jan 2025</span>
+            <span class="entry__loc hide-sm">San Luis Obispo, CA</span>
+            <span class="entry__period">2021 — 2025</span>
             <span class="entry__arrow" aria-hidden="true">→</span>
           </a>
         </li>
 
         <li>
-          <a class="entry" href="#" data-entry="calpoly">
+          <a class="entry" href="#" data-entry="mattress">
             <span class="entry__no">05</span>
             <span class="entry__role">
-              <span class="entry__title">Quantitative Analyst</span>
-              <span class="entry__company">Cal Poly Athletics <span class="sep">·</span> D1 Basketball</span>
+              <span class="entry__title">Mattress Salesman</span>
+              <span class="entry__company">Retail <span class="sep">·</span> Sales</span>
             </span>
-            <span class="entry__loc hide-sm">San Luis Obispo, CA</span>
-            <span class="entry__period">Nov 2021 — Apr 2023</span>
+            <span class="entry__loc hide-sm">—</span>
+            <span class="entry__period">—</span>
             <span class="entry__arrow" aria-hidden="true">→</span>
           </a>
         </li>
@@ -245,19 +189,12 @@
       </ol>
 
       <div class="resume__edu">
-        <div class="edu__grid">
+        <div class="edu__grid edu__grid--2">
           <div class="edu__col">
             <p class="eyebrow">EDUCATION</p>
             <p class="edu__line">
               <span class="edu__title">California Polytechnic State University</span>
               <span class="edu__detail">B.S. Statistics · Minor, Computer Science · 2021–2025</span>
-            </p>
-          </div>
-          <div class="edu__col">
-            <p class="eyebrow">SELECTED WORK</p>
-            <p class="edu__line">
-              <span class="edu__title">ML Phishing Detection · F1 0.91</span>
-              <span class="edu__detail">Graduate Research Statistical Consultant · 2024–2025</span>
             </p>
           </div>
           <div class="edu__col">
