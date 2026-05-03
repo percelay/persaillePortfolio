@@ -19,11 +19,52 @@
     <section class="hero">
       <div class="hero-grid">
         <div class="hero-panel hero-panel--graphic hero-panel--mark" aria-hidden="true">
-          <div class="top-left-art-stack">
-            <img class="top-left-art top-left-art--primary" src="assets/topleft.png" alt="" />
-            <img class="top-left-art top-left-art--vector-95" src="assets/vector-95.png" alt="" />
-            <img class="top-left-art top-left-art--vector-94" src="assets/vector-94.png" alt="" />
-          </div>
+          <svg class="mark-field" viewBox="0 0 554 264" preserveAspectRatio="xMidYMid meet">
+            <!-- Outer lens / almond — 16 straight chords approximating two arcs -->
+            <polyline class="mark-lens" points="80,132 119,90 167,58 220,39 277,32 334,39 387,58 435,90 474,132 435,174 387,206 334,225 277,232 220,225 167,206 119,174 80,132" />
+
+            <!-- Inner ring — 24-sided polygon (radius 88) reads as a circle -->
+            <polygon class="mark-ring" points="365,132 362,155 353,176 339,194 321,208 300,217 277,220 254,217 233,208 215,194 201,176 192,155 189,132 192,109 201,88 215,70 233,56 254,47 277,44 300,47 321,56 339,70 353,88 362,109" />
+
+            <!-- 24-ray sunburst from center, length 100 (rays pierce past ring) -->
+            <g class="mark-sunburst">
+              <line x1="277" y1="132" x2="377" y2="132" />
+              <line x1="277" y1="132" x2="374" y2="158" />
+              <line x1="277" y1="132" x2="364" y2="182" />
+              <line x1="277" y1="132" x2="348" y2="203" />
+              <line x1="277" y1="132" x2="327" y2="219" />
+              <line x1="277" y1="132" x2="303" y2="229" />
+              <line x1="277" y1="132" x2="277" y2="232" />
+              <line x1="277" y1="132" x2="251" y2="229" />
+              <line x1="277" y1="132" x2="227" y2="219" />
+              <line x1="277" y1="132" x2="206" y2="203" />
+              <line x1="277" y1="132" x2="190" y2="182" />
+              <line x1="277" y1="132" x2="180" y2="158" />
+              <line x1="277" y1="132" x2="177" y2="132" />
+              <line x1="277" y1="132" x2="180" y2="106" />
+              <line x1="277" y1="132" x2="190" y2="82" />
+              <line x1="277" y1="132" x2="206" y2="61" />
+              <line x1="277" y1="132" x2="227" y2="45" />
+              <line x1="277" y1="132" x2="251" y2="35" />
+              <line x1="277" y1="132" x2="277" y2="32" />
+              <line x1="277" y1="132" x2="303" y2="35" />
+              <line x1="277" y1="132" x2="327" y2="45" />
+              <line x1="277" y1="132" x2="348" y2="61" />
+              <line x1="277" y1="132" x2="364" y2="82" />
+              <line x1="277" y1="132" x2="374" y2="106" />
+            </g>
+
+            <!-- Horizontal piercing axis with arrowheads at both ends -->
+            <line class="mark-axis" x1="20" y1="132" x2="534" y2="132" />
+            <polyline class="mark-arrow" points="32,124 20,132 32,140" />
+            <polyline class="mark-arrow" points="522,124 534,132 522,140" />
+
+            <!-- Vertical chevrons at top and bottom of lens, pointing outward -->
+            <line class="mark-axis" x1="277" y1="14" x2="277" y2="32" />
+            <polyline class="mark-arrow" points="271,22 277,14 283,22" />
+            <line class="mark-axis" x1="277" y1="232" x2="277" y2="250" />
+            <polyline class="mark-arrow" points="271,242 277,250 283,242" />
+          </svg>
         </div>
 
         <div class="hero-panel hero-panel--websites">

@@ -158,25 +158,16 @@ ol, ul { list-style: none; padding: 0; margin: 0; }
   fill: var(--color-canvas-white);
 }
 
-.top-left-art-stack {
-  position: absolute;
-  inset: clamp(20px, 3vw, 42px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(10px, 2vw, 24px);
+.mark-field {
+  opacity: 0.82;
 }
 
-.top-left-art {
-  display: block;
-  width: auto;
-  max-width: 30%;
-  max-height: 82%;
-  object-fit: contain;
+.mark-lens {
+  stroke-dasharray: 14 8;
 }
 
-.top-left-art--vector-94 {
-  max-width: 22%;
+.mark-sunburst line {
+  stroke-width: 1;
 }
 
 .orbit-field {
