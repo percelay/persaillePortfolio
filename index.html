@@ -216,8 +216,8 @@
           </a>
         </li>
 
-        <li>
-          <a class="entry" href="#" data-entry="persaille">
+        <li class="entries__item--expandable">
+          <button class="entry entry--toggle" type="button" data-entry="persaille" aria-expanded="false" aria-controls="persaille-panel">
             <span class="entry__no">02</span>
             <span class="entry__role">
               <span class="entry__title">Founder</span>
@@ -225,8 +225,47 @@
             </span>
             <span class="entry__loc hide-sm">New York, NY</span>
             <span class="entry__period"><span class="dotnow"></span>Feb 2026 — Present</span>
-            <span class="entry__arrow" aria-hidden="true">→</span>
-          </a>
+            <span class="entry__arrow entry__arrow--toggle" aria-hidden="true">↓</span>
+          </button>
+          <div id="persaille-panel" class="entry-panel" data-open="false" role="region" aria-label="Persaille experience">
+            <div class="entry-panel__inner">
+              <div class="entry-panel__content">
+                <div class="persaille-prose">
+                  <p class="eyebrow">FOUNDER · AI AGENCY</p>
+                  <p class="persaille-line">
+                    An AI-Centric agency, where I ended up learning more about
+                    personal service and client satisfaction than all else.
+                  </p>
+                  <p class="persaille-line">
+                    Thousands of cold calls, hundreds of websites built, and a
+                    few handfuls of happy, paying customers.
+                  </p>
+                </div>
+
+                <div class="persaille-sites">
+                  <div class="persaille-sites__head">
+                    <p class="eyebrow">CLIENT SITES · TAP TO PREVIEW</p>
+                    <p class="persaille-sites__hint">
+                      Sites load inline below the link. Some sites block
+                      embedding for security — use “open in new tab” when the
+                      preview stays blank.
+                    </p>
+                  </div>
+                  <ul class="site-list" id="persaille-sites" aria-label="Persaille client websites"></ul>
+                  <noscript>
+                    <ul class="site-list site-list--noscript">
+                      <li><a class="site-link" href="https://www.bigbwolfelectric.com" target="_blank" rel="noopener">bigbwolfelectric.com ↗</a></li>
+                      <li><a class="site-link" href="https://www.trademasterllc.net/" target="_blank" rel="noopener">trademasterllc.net ↗</a></li>
+                      <li><a class="site-link" href="https://www.marketair.com/" target="_blank" rel="noopener">marketair.com ↗</a></li>
+                      <li><a class="site-link" href="https://audiencemachine.co" target="_blank" rel="noopener">audiencemachine.co ↗</a></li>
+                      <li><a class="site-link" href="https://www.sabinepstudio.com/" target="_blank" rel="noopener">sabinepstudio.com ↗</a></li>
+                      <li><a class="site-link" href="https://www.tigerelectricalservices.com/" target="_blank" rel="noopener">tigerelectricalservices.com ↗</a></li>
+                    </ul>
+                  </noscript>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
 
         <li>
@@ -302,6 +341,107 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ── Persaille click-in panel + inline site previews ──────────
+    (function () {
+      const persailleSites = [
+        { url: 'https://www.bigbwolfelectric.com',          host: 'bigbwolfelectric.com' },
+        { url: 'https://www.trademasterllc.net/',           host: 'trademasterllc.net' },
+        { url: 'https://www.marketair.com/',                host: 'marketair.com' },
+        { url: 'https://audiencemachine.co',                host: 'audiencemachine.co' },
+        { url: 'https://www.sabinepstudio.com/',            host: 'sabinepstudio.com' },
+        { url: 'https://www.tigerelectricalservices.com/',  host: 'tigerelectricalservices.com' },
+      ];
+
+      const list = document.getElementById('persaille-sites');
+      if (list) {
+        list.innerHTML = persailleSites.map((s, i) => {
+          const n = String(i + 1).padStart(2, '0');
+          return `
+            <li class="site-item">
+              <button class="site-trigger" type="button" aria-expanded="false" aria-controls="site-frame-${i}">
+                <span class="site-trigger__no">${n}</span>
+                <span class="site-trigger__url">${s.host}</span>
+                <span class="site-trigger__action">PREVIEW <span class="site-trigger__chevron" aria-hidden="true">↓</span></span>
+              </button>
+              <div class="site-frame" id="site-frame-${i}" data-open="false">
+                <div class="site-frame__inner">
+                  <div class="site-frame__bar">
+                    <span class="site-frame__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                    <span class="site-frame__addr">${s.host}</span>
+                    <a class="site-frame__open" href="${s.url}" target="_blank" rel="noopener">OPEN ↗</a>
+                  </div>
+                  <div class="site-frame__viewport">
+                    <div class="site-frame__loader" aria-hidden="true">LOADING…</div>
+                    <iframe class="site-frame__iframe" data-src="${s.url}" title="${s.host} preview" loading="lazy" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+                    <div class="site-frame__fallback" hidden>
+                      <p class="site-frame__fallback-msg">
+                        ${s.host} blocks inline embedding for security
+                        <small>(X-Frame-Options / CSP frame-ancestors)</small>
+                      </p>
+                      <a class="btn" href="${s.url}" target="_blank" rel="noopener">OPEN IN NEW TAB ↗</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>`;
+        }).join('');
+
+        list.addEventListener('click', (e) => {
+          const trigger = e.target.closest('.site-trigger');
+          if (!trigger) return;
+          const frame = trigger.nextElementSibling;
+          const open  = frame.dataset.open === 'true';
+          frame.dataset.open = open ? 'false' : 'true';
+          trigger.setAttribute('aria-expanded', open ? 'false' : 'true');
+
+          if (open) return;
+
+          const iframe   = frame.querySelector('iframe');
+          const loader   = frame.querySelector('.site-frame__loader');
+          const fallback = frame.querySelector('.site-frame__fallback');
+
+          if (iframe.dataset.src && !iframe.src) {
+            iframe.src = iframe.dataset.src;
+
+            let resolved = false;
+            const resolve = () => {
+              if (resolved) return;
+              resolved = true;
+              if (loader) loader.hidden = true;
+              try {
+                const href = iframe.contentWindow && iframe.contentWindow.location.href;
+                if (!href || href === 'about:blank' || href === 'about:srcdoc') {
+                  if (fallback) fallback.hidden = false;
+                }
+              } catch (_) {
+                // SecurityError = cross-origin loaded successfully — keep fallback hidden
+              }
+            };
+
+            iframe.addEventListener('load', () => {
+              // small delay so X-Frame-Options enforcement settles
+              setTimeout(resolve, 120);
+            }, { once: true });
+
+            iframe.addEventListener('error', resolve, { once: true });
+
+            // backup if load never fires (network failure, etc.)
+            setTimeout(resolve, 8000);
+          }
+        });
+      }
+
+      const toggle = document.querySelector('[data-entry="persaille"]');
+      const panel  = document.getElementById('persaille-panel');
+      if (toggle && panel) {
+        toggle.addEventListener('click', () => {
+          const open = panel.dataset.open === 'true';
+          panel.dataset.open = open ? 'false' : 'true';
+          toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+        });
+      }
+    })();
   </script>
 </body>
 </html>
