@@ -321,16 +321,36 @@
         </li>
 
         <li>
-          <a class="entry" href="#" data-entry="mattress">
+          <button class="entry entry--toggle" type="button" data-entry="mattress" aria-expanded="false" aria-controls="mattress-panel">
             <span class="entry__no">05</span>
             <span class="entry__role">
               <span class="entry__title">Mattress Salesman</span>
-              <span class="entry__company">Retail <span class="sep">·</span> Sales</span>
+              <span class="entry__company">Mattress Warehouse <span class="sep">·</span> Full-time</span>
             </span>
-            <span class="entry__loc hide-sm">—</span>
-            <span class="entry__period">—</span>
-            <span class="entry__arrow" aria-hidden="true">→</span>
-          </a>
+            <span class="entry__loc hide-sm">Montclair, NJ</span>
+            <span class="entry__period">Jun 2022 — Sep 2022</span>
+            <span class="entry__arrow entry__arrow--toggle" aria-hidden="true">↓</span>
+          </button>
+          <div id="mattress-panel" class="entry-panel" data-open="false" role="region" aria-label="Mattress Salesman experience">
+            <div class="entry-panel__inner">
+              <div class="entry-panel__content mattress-panel">
+                <figure class="mattress-photo">
+                  <img src="assets/experience/mattressstore.jpg" alt="Dale outside Mattress Warehouse in Montclair with an inflatable sale figure" />
+                </figure>
+                <div class="mattress-copy">
+                  <p class="eyebrow">MATTRESS WAREHOUSE · 4 MOS</p>
+                  <ol class="mattress-notes">
+                    <li>Stint inspired by Saul Goodman working at CC Mobile selling TracFones in <em>Better Call Saul</em>.</li>
+                    <li>100+ mattresses sold. Northeast Regional Top 20 salesperson in August 2022.</li>
+                    <li>
+                      Worked with Frank, a mattress veteran who came out of retirement and went through Mattress Warehouse training with me.
+                      Nicknamed <a href="https://photos.google.com/photo/AF1QipOPS%7CQ6c%7CLP9nAXigal3SH7EpMf6Yz4k_7vpE12" target="_blank" rel="noopener">“the legend and the kid”</a>.
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
 
       </ol>
@@ -426,16 +446,16 @@
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // ── Persaille panel toggle ────────────────────────────────────
-    const toggle = document.querySelector('[data-entry="persaille"]');
-    const panel  = document.getElementById('persaille-panel');
-    if (toggle && panel) {
+    // ── Resume entry panel toggles ────────────────────────────────
+    document.querySelectorAll('.entry--toggle[aria-controls]').forEach((toggle) => {
+      const panel = document.getElementById(toggle.getAttribute('aria-controls'));
+      if (!panel) return;
       toggle.addEventListener('click', () => {
         const open = panel.dataset.open === 'true';
         panel.dataset.open = open ? 'false' : 'true';
         toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
       });
-    }
+    });
   </script>
 </body>
 </html>
