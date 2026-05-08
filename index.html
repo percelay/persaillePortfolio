@@ -331,16 +331,75 @@
 
   </main>
 
-  <footer class="foot">
-    <div class="foot__row">
-      <span>© <span id="year"></span> PERSAILLE</span>
-      <span>NEW YORK</span>
-      <span>ALL RIGHTS RESERVED</span>
+  <footer class="foot" aria-label="Contact">
+    <div class="foot__stage" aria-hidden="true">
+      <svg class="foot__astrolabe" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet">
+        <line class="foot__axis" x1="20"  y1="300" x2="980" y2="300" />
+        <polyline class="foot__arrow" points="36,288 20,300 36,312" />
+        <polyline class="foot__arrow" points="964,288 980,300 964,312" />
+        <line class="foot__axis" x1="500" y1="20"  x2="500" y2="580" />
+        <polyline class="foot__arrow" points="488,36  500,20  512,36"  />
+        <polyline class="foot__arrow" points="488,564 500,580 512,564" />
+
+        <circle class="foot__ring" cx="500" cy="300" r="240" />
+        <circle class="foot__ring" cx="500" cy="300" r="160" />
+        <circle class="foot__ring" cx="500" cy="300" r="80"  />
+
+        <g class="foot__orbits">
+          <ellipse cx="500" cy="300" rx="420" ry="84" />
+          <ellipse cx="500" cy="300" rx="420" ry="84" transform="rotate(60 500 300)" />
+          <ellipse cx="500" cy="300" rx="420" ry="84" transform="rotate(-60 500 300)" />
+        </g>
+
+        <polyline class="foot__lens" points="220,300 264,250 320,213 384,191 458,180 542,180 616,191 680,213 736,250 780,300 736,350 680,387 616,409 542,420 458,420 384,409 320,387 264,350 220,300" />
+
+        <g class="foot__sun">
+          <line x1="500" y1="300" x2="560" y2="300" />
+          <line x1="500" y1="300" x2="552" y2="330" />
+          <line x1="500" y1="300" x2="530" y2="352" />
+          <line x1="500" y1="300" x2="500" y2="360" />
+          <line x1="500" y1="300" x2="470" y2="352" />
+          <line x1="500" y1="300" x2="448" y2="330" />
+          <line x1="500" y1="300" x2="440" y2="300" />
+          <line x1="500" y1="300" x2="448" y2="270" />
+          <line x1="500" y1="300" x2="470" y2="248" />
+          <line x1="500" y1="300" x2="500" y2="240" />
+          <line x1="500" y1="300" x2="530" y2="248" />
+          <line x1="500" y1="300" x2="552" y2="270" />
+        </g>
+        <circle class="foot__core" cx="500" cy="300" r="6" />
+      </svg>
+
+      <div class="foot__ruler"></div>
+      <div class="foot__ruler foot__ruler--bottom"></div>
+
+      <span class="foot__cross foot__cross--tl"></span>
+      <span class="foot__cross foot__cross--tr"></span>
+      <span class="foot__cross foot__cross--bl"></span>
+      <span class="foot__cross foot__cross--br"></span>
+    </div>
+
+    <div class="foot__contact">
+      <a class="foot__line" href="mailto:dale@persaille.com">
+        <span class="foot__line__value">dale@persaille.com</span>
+        <svg class="foot__line__mark" aria-hidden="true" viewBox="0 0 28 28">
+          <line x1="4" y1="24" x2="24" y2="4" />
+          <polyline points="10,4 24,4 24,18" />
+        </svg>
+      </a>
+      <a class="foot__line" href="tel:+12012137155">
+        <span class="foot__line__value">+1 (201) 213&#8209;7155</span>
+        <svg class="foot__line__mark" aria-hidden="true" viewBox="0 0 28 28">
+          <line x1="4" y1="24" x2="24" y2="4" />
+          <polyline points="10,4 24,4 24,18" />
+        </svg>
+      </a>
     </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
     // ── Persaille click-in panel + inline site previews ──────────
     (function () {
