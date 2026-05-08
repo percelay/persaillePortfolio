@@ -242,26 +242,52 @@
                   </p>
                 </div>
 
-                <div class="persaille-sites">
-                  <div class="persaille-sites__head">
-                    <p class="eyebrow">CLIENT SITES · TAP TO PREVIEW</p>
-                    <p class="persaille-sites__hint">
-                      Sites load inline below the link. Some sites block
-                      embedding for security — use “open in new tab” when the
-                      preview stays blank.
-                    </p>
-                  </div>
-                  <ul class="site-list" id="persaille-sites" aria-label="Persaille client websites"></ul>
-                  <noscript>
-                    <ul class="site-list site-list--noscript">
-                      <li><a class="site-link" href="https://www.bigbwolfelectric.com" target="_blank" rel="noopener">bigbwolfelectric.com ↗</a></li>
-                      <li><a class="site-link" href="https://www.trademasterllc.net/" target="_blank" rel="noopener">trademasterllc.net ↗</a></li>
-                      <li><a class="site-link" href="https://www.marketair.com/" target="_blank" rel="noopener">marketair.com ↗</a></li>
-                      <li><a class="site-link" href="https://audiencemachine.co" target="_blank" rel="noopener">audiencemachine.co ↗</a></li>
-                      <li><a class="site-link" href="https://www.sabinepstudio.com/" target="_blank" rel="noopener">sabinepstudio.com ↗</a></li>
-                      <li><a class="site-link" href="https://www.tigerelectricalservices.com/" target="_blank" rel="noopener">tigerelectricalservices.com ↗</a></li>
-                    </ul>
-                  </noscript>
+                <div class="client-grid">
+                  <a class="client-card" href="https://www.trademasterllc.net/" target="_blank" rel="noopener">
+                    <div class="client-card__logo"><img src="assets/clients/trademaster.png" alt="Trademaster Construction LLC" /></div>
+                    <div class="client-card__body">
+                      <p class="client-card__story">Cold call — left a voicemail, he called back. Saved them $900/yr.</p>
+                      <span class="client-card__url">trademasterllc.net ↗</span>
+                    </div>
+                  </a>
+                  <a class="client-card" href="https://www.bigbwolfelectric.com" target="_blank" rel="noopener">
+                    <div class="client-card__logo client-card__logo--wolf">
+                      <img src="assets/clients/bigbwolf.jpeg" alt="" aria-hidden="true" />
+                      <span>Big B Wolf <small>Electric</small></span>
+                    </div>
+                    <div class="client-card__body">
+                      <p class="client-card__story">Cold call — two demos to close.</p>
+                      <span class="client-card__url">bigbwolfelectric.com ↗</span>
+                    </div>
+                  </a>
+                  <a class="client-card" href="https://www.tigerelectricalservices.com/" target="_blank" rel="noopener">
+                    <div class="client-card__logo"><img src="assets/clients/tiger.png" alt="Tiger Electrical Services" /></div>
+                    <div class="client-card__body">
+                      <p class="client-card__story">Word of mouth.</p>
+                      <span class="client-card__url">tigerelectricalservices.com ↗</span>
+                    </div>
+                  </a>
+                  <a class="client-card" href="https://audiencemachine.co" target="_blank" rel="noopener">
+                    <div class="client-card__logo"><img src="assets/clients/audiencemachine.png" alt="Audience Machine" /></div>
+                    <div class="client-card__body">
+                      <p class="client-card__story">Client referral.</p>
+                      <span class="client-card__url">audiencemachine.co ↗</span>
+                    </div>
+                  </a>
+                  <a class="client-card" href="https://www.sabinepstudio.com/" target="_blank" rel="noopener">
+                    <div class="client-card__logo"><img src="assets/clients/sabine.png" alt="Sabine P Studio" /></div>
+                    <div class="client-card__body">
+                      <p class="client-card__story">Client referral.</p>
+                      <span class="client-card__url">sabinepstudio.com ↗</span>
+                    </div>
+                  </a>
+                  <a class="client-card" href="https://www.marketair.com/" target="_blank" rel="noopener">
+                    <div class="client-card__logo"><img src="assets/clients/marketair.avif" alt="Marketair" /></div>
+                    <div class="client-card__body">
+                      <p class="client-card__story">Cold call — four demos. Manage ecommerce. Saved them $2,400/yr.</p>
+                      <span class="client-card__url">marketair.com ↗</span>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -332,41 +358,57 @@
   </main>
 
   <footer class="foot" aria-label="Contact">
-    <svg class="foot__svg" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMax slice">
+    <svg class="foot__svg" viewBox="0 0 1600 240" preserveAspectRatio="xMidYMax slice">
       <title>Contact: dale@persaille.com · +1 (201) 213-7155</title>
       <defs>
-        <!-- visible upper arc of each ring, for text to follow -->
-        <path id="foot-path-email" d="M 539 400 A 280 280 0 0 1 1061 400" />
-        <path id="foot-path-phone" d="M 688 400 A 150 150 0 0 1 912 400" />
+        <path id="foot-path-email" d="M 523 240 A 320 320 0 0 1 1077 240" />
+        <path id="foot-path-phone" d="M 680 240 A 200 200 0 0 1 920 240" />
+        <pattern id="foot-ticks" x="0" y="0" width="16" height="10" patternUnits="userSpaceOnUse">
+          <line x1="0" y1="4" x2="0" y2="10" />
+        </pattern>
       </defs>
 
-      <!-- rings -->
       <g class="foot__rings">
-        <circle cx="800" cy="500" r="410" />
-        <circle cx="800" cy="500" r="280" />
-        <circle cx="800" cy="500" r="150" />
+        <circle cx="800" cy="400" r="200" />
+        <circle cx="800" cy="400" r="320" />
+        <circle cx="800" cy="400" r="440" />
+        <circle cx="800" cy="400" r="560" />
+        <circle class="foot__ring--dashed" cx="800" cy="400" r="680" />
+        <circle class="foot__ring--dashed" cx="800" cy="400" r="800" />
       </g>
 
-      <!-- rays -->
       <g class="foot__rays">
-        <line x1="800" y1="500" x2="1185" y2="360" />
-        <line x1="800" y1="500" x2="1155" y2="295" />
-        <line x1="800" y1="500" x2="1114" y2="236" />
-        <line x1="800" y1="500" x2="1064" y2="186" />
-        <line x1="800" y1="500" x2="1005" y2="145" />
-        <line x1="800" y1="500" x2="940"  y2="114" />
-        <line x1="800" y1="500" x2="871"  y2="96"  />
-        <line x1="800" y1="500" x2="800"  y2="90"  />
-        <line x1="800" y1="500" x2="729"  y2="96"  />
-        <line x1="800" y1="500" x2="660"  y2="114" />
-        <line x1="800" y1="500" x2="595"  y2="145" />
-        <line x1="800" y1="500" x2="536"  y2="186" />
-        <line x1="800" y1="500" x2="486"  y2="236" />
-        <line x1="800" y1="500" x2="445"  y2="295" />
-        <line x1="800" y1="500" x2="415"  y2="360" />
+        <line x1="800" y1="400" x2="1656" y2="122" />
+        <line x1="800" y1="400" x2="1622" y2="34"  />
+        <line x1="800" y1="400" x2="1579" y2="-50" />
+        <line x1="800" y1="400" x2="1528" y2="-129" />
+        <line x1="800" y1="400" x2="1469" y2="-202" />
+        <line x1="800" y1="400" x2="1402" y2="-269" />
+        <line x1="800" y1="400" x2="1329" y2="-328" />
+        <line x1="800" y1="400" x2="1250" y2="-379" />
+        <line x1="800" y1="400" x2="1166" y2="-422" />
+        <line x1="800" y1="400" x2="1078" y2="-456" />
+        <line x1="800" y1="400" x2="987"  y2="-480" />
+        <line x1="800" y1="400" x2="894"  y2="-495" />
+        <line x1="800" y1="400" x2="800"  y2="-500" />
+        <line x1="800" y1="400" x2="706"  y2="-495" />
+        <line x1="800" y1="400" x2="613"  y2="-480" />
+        <line x1="800" y1="400" x2="522"  y2="-456" />
+        <line x1="800" y1="400" x2="434"  y2="-422" />
+        <line x1="800" y1="400" x2="350"  y2="-379" />
+        <line x1="800" y1="400" x2="271"  y2="-328" />
+        <line x1="800" y1="400" x2="198"  y2="-269" />
+        <line x1="800" y1="400" x2="131"  y2="-202" />
+        <line x1="800" y1="400" x2="72"   y2="-129" />
+        <line x1="800" y1="400" x2="21"   y2="-50"  />
+        <line x1="800" y1="400" x2="-22"  y2="34"   />
+        <line x1="800" y1="400" x2="-56"  y2="122"  />
       </g>
 
-      <!-- contact text inscribed on the arcs -->
+      <rect class="foot__tickbar" x="0" y="230" width="1600" height="10" fill="url(#foot-ticks)" stroke="none" />
+
+      <polygon class="foot__gem" points="800,220 815,234 800,248 785,234" />
+
       <a href="mailto:dale@persaille.com" class="foot__arc-link">
         <text class="foot__arc-text">
           <textPath href="#foot-path-email" startOffset="50%" text-anchor="middle">dale@persaille.com</textPath>
@@ -384,106 +426,16 @@
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // ── Persaille click-in panel + inline site previews ──────────
-    (function () {
-      const persailleSites = [
-        { url: 'https://www.bigbwolfelectric.com',          host: 'bigbwolfelectric.com' },
-        { url: 'https://www.trademasterllc.net/',           host: 'trademasterllc.net' },
-        { url: 'https://www.marketair.com/',                host: 'marketair.com' },
-        { url: 'https://audiencemachine.co',                host: 'audiencemachine.co' },
-        { url: 'https://www.sabinepstudio.com/',            host: 'sabinepstudio.com' },
-        { url: 'https://www.tigerelectricalservices.com/',  host: 'tigerelectricalservices.com' },
-      ];
-
-      const list = document.getElementById('persaille-sites');
-      if (list) {
-        list.innerHTML = persailleSites.map((s, i) => {
-          const n = String(i + 1).padStart(2, '0');
-          return `
-            <li class="site-item">
-              <button class="site-trigger" type="button" aria-expanded="false" aria-controls="site-frame-${i}">
-                <span class="site-trigger__no">${n}</span>
-                <span class="site-trigger__url">${s.host}</span>
-                <span class="site-trigger__action">PREVIEW <span class="site-trigger__chevron" aria-hidden="true">↓</span></span>
-              </button>
-              <div class="site-frame" id="site-frame-${i}" data-open="false">
-                <div class="site-frame__inner">
-                  <div class="site-frame__bar">
-                    <span class="site-frame__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                    <span class="site-frame__addr">${s.host}</span>
-                    <a class="site-frame__open" href="${s.url}" target="_blank" rel="noopener">OPEN ↗</a>
-                  </div>
-                  <div class="site-frame__viewport">
-                    <div class="site-frame__loader" aria-hidden="true">LOADING…</div>
-                    <iframe class="site-frame__iframe" data-src="${s.url}" title="${s.host} preview" loading="lazy" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
-                    <div class="site-frame__fallback" hidden>
-                      <p class="site-frame__fallback-msg">
-                        ${s.host} blocks inline embedding for security
-                        <small>(X-Frame-Options / CSP frame-ancestors)</small>
-                      </p>
-                      <a class="btn" href="${s.url}" target="_blank" rel="noopener">OPEN IN NEW TAB ↗</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>`;
-        }).join('');
-
-        list.addEventListener('click', (e) => {
-          const trigger = e.target.closest('.site-trigger');
-          if (!trigger) return;
-          const frame = trigger.nextElementSibling;
-          const open  = frame.dataset.open === 'true';
-          frame.dataset.open = open ? 'false' : 'true';
-          trigger.setAttribute('aria-expanded', open ? 'false' : 'true');
-
-          if (open) return;
-
-          const iframe   = frame.querySelector('iframe');
-          const loader   = frame.querySelector('.site-frame__loader');
-          const fallback = frame.querySelector('.site-frame__fallback');
-
-          if (iframe.dataset.src && !iframe.src) {
-            iframe.src = iframe.dataset.src;
-
-            let resolved = false;
-            const resolve = () => {
-              if (resolved) return;
-              resolved = true;
-              if (loader) loader.hidden = true;
-              try {
-                const href = iframe.contentWindow && iframe.contentWindow.location.href;
-                if (!href || href === 'about:blank' || href === 'about:srcdoc') {
-                  if (fallback) fallback.hidden = false;
-                }
-              } catch (_) {
-                // SecurityError = cross-origin loaded successfully — keep fallback hidden
-              }
-            };
-
-            iframe.addEventListener('load', () => {
-              // small delay so X-Frame-Options enforcement settles
-              setTimeout(resolve, 120);
-            }, { once: true });
-
-            iframe.addEventListener('error', resolve, { once: true });
-
-            // backup if load never fires (network failure, etc.)
-            setTimeout(resolve, 8000);
-          }
-        });
-      }
-
-      const toggle = document.querySelector('[data-entry="persaille"]');
-      const panel  = document.getElementById('persaille-panel');
-      if (toggle && panel) {
-        toggle.addEventListener('click', () => {
-          const open = panel.dataset.open === 'true';
-          panel.dataset.open = open ? 'false' : 'true';
-          toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
-        });
-      }
-    })();
+    // ── Persaille panel toggle ────────────────────────────────────
+    const toggle = document.querySelector('[data-entry="persaille"]');
+    const panel  = document.getElementById('persaille-panel');
+    if (toggle && panel) {
+      toggle.addEventListener('click', () => {
+        const open = panel.dataset.open === 'true';
+        panel.dataset.open = open ? 'false' : 'true';
+        toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+      });
+    }
   </script>
 </body>
 </html>
