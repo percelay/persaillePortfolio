@@ -332,33 +332,51 @@
   </main>
 
   <footer class="foot" aria-label="Contact">
-    <div class="foot__contact">
-      <a class="foot__line" href="mailto:dale@persaille.com">dale@persaille.com</a>
-      <span class="foot__sep" aria-hidden="true">·</span>
-      <a class="foot__line" href="tel:+12012137155">+1 (201) 213&#8209;7155</a>
-    </div>
+    <svg class="foot__svg" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMax slice">
+      <title>Contact: dale@persaille.com · +1 (201) 213-7155</title>
+      <defs>
+        <!-- visible upper arc of each ring, for text to follow -->
+        <path id="foot-path-email" d="M 539 400 A 280 280 0 0 1 1061 400" />
+        <path id="foot-path-phone" d="M 688 400 A 150 150 0 0 1 912 400" />
+      </defs>
 
-    <svg class="foot__rays" viewBox="0 0 1000 400" preserveAspectRatio="none" aria-hidden="true">
-      <g class="foot__rays-arcs">
-        <ellipse cx="500" cy="500" rx="500" ry="500" />
-        <ellipse cx="500" cy="500" rx="350" ry="350" />
-        <ellipse cx="500" cy="500" rx="200" ry="200" />
+      <!-- rings -->
+      <g class="foot__rings">
+        <circle cx="800" cy="500" r="410" />
+        <circle cx="800" cy="500" r="280" />
+        <circle cx="800" cy="500" r="150" />
       </g>
-      <g class="foot__rays-lines">
-        <line x1="500" y1="500" x2="933" y2="250" />
-        <line x1="500" y1="500" x2="883" y2="179" />
-        <line x1="500" y1="500" x2="821" y2="117" />
-        <line x1="500" y1="500" x2="750" y2="67"  />
-        <line x1="500" y1="500" x2="671" y2="30"  />
-        <line x1="500" y1="500" x2="587" y2="8"   />
-        <line x1="500" y1="500" x2="500" y2="0"   />
-        <line x1="500" y1="500" x2="413" y2="8"   />
-        <line x1="500" y1="500" x2="329" y2="30"  />
-        <line x1="500" y1="500" x2="250" y2="67"  />
-        <line x1="500" y1="500" x2="179" y2="117" />
-        <line x1="500" y1="500" x2="117" y2="179" />
-        <line x1="500" y1="500" x2="67"  y2="250" />
+
+      <!-- rays -->
+      <g class="foot__rays">
+        <line x1="800" y1="500" x2="1185" y2="360" />
+        <line x1="800" y1="500" x2="1155" y2="295" />
+        <line x1="800" y1="500" x2="1114" y2="236" />
+        <line x1="800" y1="500" x2="1064" y2="186" />
+        <line x1="800" y1="500" x2="1005" y2="145" />
+        <line x1="800" y1="500" x2="940"  y2="114" />
+        <line x1="800" y1="500" x2="871"  y2="96"  />
+        <line x1="800" y1="500" x2="800"  y2="90"  />
+        <line x1="800" y1="500" x2="729"  y2="96"  />
+        <line x1="800" y1="500" x2="660"  y2="114" />
+        <line x1="800" y1="500" x2="595"  y2="145" />
+        <line x1="800" y1="500" x2="536"  y2="186" />
+        <line x1="800" y1="500" x2="486"  y2="236" />
+        <line x1="800" y1="500" x2="445"  y2="295" />
+        <line x1="800" y1="500" x2="415"  y2="360" />
       </g>
+
+      <!-- contact text inscribed on the arcs -->
+      <a href="mailto:dale@persaille.com" class="foot__arc-link">
+        <text class="foot__arc-text">
+          <textPath href="#foot-path-email" startOffset="50%" text-anchor="middle">dale@persaille.com</textPath>
+        </text>
+      </a>
+      <a href="tel:+12012137155" class="foot__arc-link">
+        <text class="foot__arc-text">
+          <textPath href="#foot-path-phone" startOffset="50%" text-anchor="middle">+1 (201) 213&#8209;7155</textPath>
+        </text>
+      </a>
     </svg>
   </footer>
 
