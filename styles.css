@@ -162,12 +162,28 @@ ol, ul { list-style: none; padding: 0; margin: 0; }
   opacity: 0.82;
 }
 
-.mark-lens {
+.mark-curve {
   stroke-dasharray: 14 8;
 }
 
-.mark-sunburst line {
+.mark-curve--echo {
+  opacity: 0.36;
+}
+
+.mark-tangent {
+  stroke-width: 1.25;
+}
+
+.mark-slope-triangle {
+  stroke-dasharray: 8 7;
+}
+
+.mark-slope-field line {
   stroke-width: 1;
+}
+
+.hero-panel--graphic .mark-point {
+  fill: var(--color-ink-black);
 }
 
 .orbit-field {
