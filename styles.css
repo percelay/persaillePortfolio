@@ -167,33 +167,25 @@ ol, ul { list-style: none; padding: 0; margin: 0; }
   fill: none;
 }
 
-.mark-ratio {
+.mark-frame,
+.mark-diagram,
+.mark-center {
+  stroke-width: 1.6;
+}
+
+.mark-frame {
+  opacity: 0.76;
+}
+
+.mark-diagram {
   opacity: 0.72;
 }
 
-.mark-ratio line,
-.mark-compass path {
-  stroke-width: 0.75;
+.mark-center {
+  opacity: 0.78;
 }
 
-.mark-compass {
-  opacity: 0.58;
-}
-
-.mark-compass path:nth-of-type(n + 5) {
-  stroke-dasharray: 8 7;
-}
-
-.mark-construction {
-  opacity: 0.48;
-  stroke-dasharray: 18 10;
-}
-
-.mark-ticks {
-  opacity: 0.74;
-}
-
-.mark-pins circle {
+.mark-dots circle {
   fill: var(--color-ink-black);
 }
 
