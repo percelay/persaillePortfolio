@@ -162,27 +162,38 @@ ol, ul { list-style: none; padding: 0; margin: 0; }
   opacity: 0.82;
 }
 
-.mark-curve {
-  stroke-dasharray: 14 8;
+.mark-field circle,
+.mark-field rect {
+  fill: none;
 }
 
-.mark-curve--echo {
-  opacity: 0.36;
+.mark-ratio {
+  opacity: 0.72;
 }
 
-.mark-tangent {
-  stroke-width: 1.25;
+.mark-ratio line,
+.mark-compass path {
+  stroke-width: 0.75;
 }
 
-.mark-slope-triangle {
+.mark-compass {
+  opacity: 0.58;
+}
+
+.mark-compass path:nth-of-type(n + 5) {
   stroke-dasharray: 8 7;
 }
 
-.mark-slope-field line {
-  stroke-width: 1;
+.mark-construction {
+  opacity: 0.48;
+  stroke-dasharray: 18 10;
 }
 
-.hero-panel--graphic .mark-point {
+.mark-ticks {
+  opacity: 0.74;
+}
+
+.mark-pins circle {
   fill: var(--color-ink-black);
 }
 
